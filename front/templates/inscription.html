@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Choix d'inscription</title>
+  <link rel="stylesheet" href="../assets/css/connexion.css" />
+</head>
+<body>
+
+<h3>Veuillez choisir votre type de compte :</h3>
+
+<div class="tabs">
+  <button id="btn-client">Je suis client</button>
+  <button id="btn-artisan">Je suis artisan</button>
+</div>
+<div>
+  <p>Si vous avez déjà un compte, vous pouvez vous connecter en cliquant <a href="./connexion.html">ici</a>.</p>
+</div>
+
+<script>
+  const btnClient = document.getElementById('btn-client');
+  const btnArtisan = document.getElementById('btn-artisan');
+
+  btnClient.addEventListener('click', () => {
+    window.location.href = './inscription_client.php';
+  });
+
+  btnArtisan.addEventListener('click', () => {
+    window.location.href = './inscription_artisan.php';
+  });
+</script>
+
+</body>
+</html>
