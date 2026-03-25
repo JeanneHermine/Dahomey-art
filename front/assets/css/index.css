@@ -1,0 +1,92 @@
+#bg-video {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+/* Nom "machine à écrire" sans curseur */
+.typewriter {
+  font-size: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(7, end) forwards;
+  margin: 0 0 20px;
+}
+
+/* Animation typing */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 7ch } /* "BEN'ART" = 7 caractères */
+}
+
+/* Slogan en fondu après 8s (3s typing + 5s pause) */
+.slogan {
+  opacity: 0;
+  font-size: 1.5rem;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 4s;
+  margin: 0 0 20px;
+}
+
+/* Bouton en fondu après 13s */
+.button {
+  opacity: 0;
+  font-size: 1.5rem;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 5s;
+}
+
+/* Animation fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style bouton */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f90;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}

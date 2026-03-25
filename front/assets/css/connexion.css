@@ -1,0 +1,67 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Titre */
+h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+/* Boutons onglets */
+.tabs {
+  display: flex;
+  gap: 30px;
+}
+
+.tabs button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tabs button:hover {
+  background: linear-gradient(120deg, #bbb, #999);
+  transform: scale(1.05);
+  color: white;
+}
+
+.tabs button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Message de redirection */
+.redirect-message {
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #555;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
